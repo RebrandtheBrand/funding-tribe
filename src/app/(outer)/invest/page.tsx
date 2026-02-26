@@ -6,16 +6,17 @@ import investImg1 from "../../../../public/investImg1.webp";
 import investImg2 from "../../../../public/investImg2.webp";
 
 const page = () => {
+
   return (
     <div>
       <section className="pt-[149px] lg:pt-[60px] pb-[119px] sm:pb-[141px] px-6 sm:px-[50px] ">
-        <h1 className="text-center">INVEST WITH US</h1>
+        <h1 className="text-center">INVEST WITH«««</h1>
         <p className="md:w-[621px] text-center mx-auto text-[24px] md:text-[32px] leading-[100%] mt-[50px]">
           We keep investment simple. <br /> Each opportunity is tied to one
           project — clear, transparent, and direct.
         </p>
       </section>
-      <div className="border-t-black border-t" />
+      <div className="border-t-black border-t" />   
       <section className=" px-6 sm:px-[50px]">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center">
           <div className="py-10">

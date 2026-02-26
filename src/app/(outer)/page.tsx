@@ -69,7 +69,12 @@ export default function Home() {
             alt="trailing-arrow"
             className="xl:max-w-[1041px] h-auto md:-mt-5"
           />
-          <Button className="mb-30 group hidden xl:flex" showArrow={true}>
+          <Button
+            as="link"
+            href="/about-us"
+            className="mb-30 group hidden xl:flex"
+            showArrow={true}
+          >
             Learn More
           </Button>
         </div>
