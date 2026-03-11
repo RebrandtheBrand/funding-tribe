@@ -13,13 +13,15 @@ const LetConnect = () => {
       </Link>
       <div className="size-10 min-w-10 sm:size-[86px] sm:min-w-[86px] overflow-hidden">
         <ArrowUp
+          strokeWidth={3}
           className={clsx(
-            "flex size-9 sm:size-[78px] gap-3 mx-auto sm:translate-y-[10%] sm:translate-x-[10%] group-hover:translate-x-[80%]  group-active:translate-x-[80%] group-active:translate-y-[-80%] group-hover:translate-y-[-80%] min-w-[18px] transition-all duration-500 rotate-45"
+            "flex size-9 sm:size-[78px] gap-3 mx-auto sm:translate-y-[10%] sm:translate-x-[10%] group-hover:translate-x-[80%]  group-active:translate-x-[80%] group-active:translate-y-[-80%] group-hover:translate-y-[-80%] min-w-[18px] transition-all duration-500 rotate-45",
           )}
         />
         <ArrowUp
+          strokeWidth={3}
           className={clsx(
-            "flex gap-3 size-9 sm:size-[78px] mx-auto group-hover:-translate-y-[90%] group-active:-translate-y-[90%] group-hover:translate-x-[5%] group-active:translate-x-[5%] translate-x-[-82%] sm:translate-x-[-72%] -translate-y-2 sm:-translate-y-2 transition-all duration-500 min-w-[18px] rotate-45"
+            "flex gap-3 size-9 sm:size-[78px] font-bold mx-auto group-hover:-translate-y-[90%] group-active:-translate-y-[90%] group-hover:translate-x-[5%] group-active:translate-x-[5%] translate-x-[-82%] sm:translate-x-[-72%] -translate-y-2 sm:-translate-y-2 transition-all duration-500 min-w-[18px] rotate-45",
           )}
         />
       </div>

@@ -32,6 +32,7 @@ body {
 @theme {
   --color-white: #F7F6F1;
   --color-black: #000000;
+  --color-primary: #005852;
   --color-primary-light: #D7E3FC;
   --color-secondary: #EDF0F8;
   --color-tertiary: #677597;

@@ -75,21 +75,23 @@ const Navbar = () => {
                 <p
                   className={clsx(
                     "group-hover:text-white duration-500 transition-color text-xs text-left w-full",
-                    pathname.startsWith(link.href) ? "text-white" : "text-black"
+                    pathname.startsWith(link.href)
+                      ? "text-white"
+                      : "text-black",
                   )}
                 >
                   {link.name}
                 </p>
                 <div
                   className={clsx(
-                    "size-[7px] group-hover:bg-white bg-black duration-500 transition-color",
-                    pathname.startsWith(link.href) ? "bg-white" : "bg-black"
+                    "size-[7px] group-hover:bg-white bg-primary duration-500 transition-color",
+                    pathname.startsWith(link.href) ? "bg-white" : "bg-primary",
                   )}
                 />
                 <div
                   className={clsx(
-                    "absolute h-0 w-full group-hover:h-full bg-black transition-all duration-200 left-0 -z-1",
-                    pathname.startsWith(link.href) ? "h-full" : "h-0"
+                    "absolute h-0 w-full group-hover:h-full bg-primary transition-all duration-200 left-0 -z-1",
+                    pathname.startsWith(link.href) ? "h-full" : "h-0",
                   )}
                 />
               </Link>
@@ -108,7 +110,7 @@ const Navbar = () => {
       <div
         ref={ref}
         className={clsx(
-          "fixed flex modal flex-col justify-between h-screen top-0 w-[300px] pt-[50px] overflow-hidden lg:hidden bg-white border-r border-r-black left-0 transition-[width,padding] duration-500 ease-in-out z-10"
+          "fixed flex modal flex-col justify-between h-screen top-0 w-[300px] pt-[50px] overflow-hidden lg:hidden bg-white border-r border-r-black left-0 transition-[width,padding] duration-500 ease-in-out z-10",
         )}
         style={{
           clipPath: isComponentVisible ? "inset(0 0 0 0)" : "inset(0 100% 0 0)",
@@ -130,7 +132,7 @@ const Navbar = () => {
                       "group-hover:text-white duration-500 transition-color text-sm text-left w-full",
                       pathname.startsWith(link.href)
                         ? "text-white"
-                        : "text-black"
+                        : "text-black",
                     )}
                   >
                     {link.name}
@@ -138,13 +140,13 @@ const Navbar = () => {
                   <div
                     className={clsx(
                       "size-[7px] group-hover:bg-white duration-500 transition-color",
-                      pathname.startsWith(link.href) ? "bg-white" : "bg-black"
+                      pathname.startsWith(link.href) ? "bg-white" : "bg-black",
                     )}
                   />
                   <div
                     className={clsx(
                       "absolute w-full group-hover:h-full bg-black transition-all duration-200 left-0 -z-1",
-                      pathname.startsWith(link.href) ? "h-full" : "h-0"
+                      pathname.startsWith(link.href) ? "h-full" : "h-0",
                     )}
                   />
                 </div>

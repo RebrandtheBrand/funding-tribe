@@ -32,10 +32,10 @@ const StaffGrid = () => {
             />
             <div
               className={clsx(
-                " text-start  border-t border-t-black absolute bottom-0 md:pt-2 w-full left-0 bg-white z-1 transition-all duration-1000",
+                " text-start  absolute bottom-0 md:pt-2 w-full left-0 bg-primary text-white z-1 transition-all duration-1000",
                 active === index
                   ? "max-h-[300px]"
-                  : "lg:max-h-[60px] max-h-[50px] group-hover:max-h-[300px]"
+                  : "lg:max-h-[60px] max-h-[50px] group-hover:max-h-[300px]",
               )}
             >
               <div className="min-h-[50px] gap-2 sm:gap-3 items-center px-2 md:px-5 py-2 text-xs lg:text-base">

@@ -43,9 +43,9 @@ const page = () => {
         </div>
       </section>
       <div className="border-t-black border-t mt-[90px]" />
-      <section className="pt-[86px] px-6 sm:px-[50px] pb-40">
+      <section className="pt-[86px] px-6 sm:px-[50px] pb-40 bg-primary text-white">
         <div className="flex items-center gap-2.5">
-          <div className="size-[15px] min-w-[15px] bg-black" />
+          <div className="size-[15px] min-w-[15px] bg-white" />
           <p className="text-left w-full whitespace-nowrap">OUR PHILOSOPHY</p>
         </div>
         <div className="flex flex-col lg:flex-row gap-10 xl:gap-20 items-start justify-between">
@@ -74,16 +74,17 @@ const page = () => {
               showArrow={true}
               href="/contact-us"
               as="link"
-              className="group w-full justify-between! mt-[70px]"
+              arrowClassName="text-white group-hover:text-primary"
+              className="group w-full justify-between! mt-[70px] border-white bg-transparent! text-white! hover:bg-white! hover:text-primary! transition-colors duration-300"
             >
               Be A Part Of The Movement
             </Button>
           </div>
         </div>
       </section>
-      <section className="">
+      <section className="pt-20">
         <div className="flex items-center gap-2.5 pl-6 sm:pl-[50px]">
-          <div className="size-[15px] min-w-[15px] bg-black" />
+          <div className="size-[15px] min-w-[15px] bg-primary" />
           <p className="text-left w-full whitespace-nowrap">MEET OUR TEAM</p>
         </div>
         <StaffGrid />

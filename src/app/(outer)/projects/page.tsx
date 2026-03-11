@@ -17,8 +17,8 @@ const Page = () => {
   const projectData = data?.data || [];
   return (
     <div>
-      <section className="flex flex-col sm:flex-row gap-10">
-        <div className="pt-[120px] lg:pt-[60px] pl-6 sm:pl-[50px] text-center sm:text-start pr-6 sm:pr-0 top-0 relative">
+      <section className="flex flex-col sm:flex-row gap-10 bg-primary">
+        <div className="pt-[120px] lg:pt-[60px] pl-6 sm:pl-[50px] text-white text-center sm:text-start pr-6 sm:pr-0 top-0 relative">
           <div className="sticky top-[120px] lg:top-12 pb-10">
             <h1 className="lg:w-[477px] max-w-[331px] sm:max-w-[477px] mx-auto sm:mx-0">
               OUR FUNDED PROJECTS
@@ -29,15 +29,15 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div className="border-t-black border-t block sm:hidden" />
+        <div className="border-t-white border-t block sm:hidden" />
         <div className="flex w-full">
-          <div className="h-full border-r border-r-black" />
+          <div className="h-full border-r border-r-white" />
           {isPending ? (
             <div className="w-full justify-center">
               <FullPageLoader className="h-[50vh]! justify-center! flex" />
             </div>
           ) : (
-            <div className="w-full">
+            <div className="w-full text-white">
               {projectData.map((type, index) => {
                 return (
                   <Link
@@ -48,12 +48,12 @@ const Page = () => {
                     <div className="pl-6 flex transition-colors duration-500 group-hover:text-white justify-between items-center sm:pl-[50px] pr-6 sm:pr-[50px] py-[60px] relative">
                       <div
                         className={clsx(
-                          "absolute h-0 w-full group-hover:h-full bg-black transition-all duration-200 top-[50%] translate-y-[-50%] left-0 -z-1 self-center"
+                          "absolute h-0 w-full group-hover:h-full bg-white transition-all duration-200 top-[50%] translate-y-[-50%] left-0 z-1 self-center",
                         )}
                       />
-                      <div className="">
+                      <div className="relative z-10 group-hover:text-black transition-colors duration-500">
                         <div className="flex items-center gap-2.5">
-                          <div className="size-[15px] group-hover:bg-white min-w-[15px] bg-black transition-colors duration-500" />
+                          <div className="size-[15px] group-hover:bg-black min-w-[15px] bg-white transition-colors duration-500" />
                           <p className="text-left w-full whitespace-nowrap">
                             {`0.0${index + 1}`}
                           </p>
@@ -70,7 +70,7 @@ const Page = () => {
                       </div>
                     </div>
                     {index < PROJECTS.length - 1 && (
-                      <div className="border-t-black border-t" />
+                      <div className="border-t-white border-t" />
                     )}
                   </Link>
                 );

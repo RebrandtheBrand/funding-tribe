@@ -40,14 +40,15 @@ export default function Home() {
           className="lg:max-w-[1041px] h-auto ml-auto xl:-mt-[450px]"
         />
       </section>
-      <div className="border-t-black border-t" />
-      <section className="pr-6 sm:pr-[50px] pt-[88px]" id="about-us">
+      <section className="pr-6 sm:pr-[50px] pt-[88px] bg-primary" id="about-us">
         <div className="flex flex-col xl:flex-row items-start pl-6 sm:pl-[50px] gap-[53px]">
           <div className="flex items-center gap-2.5">
-            <div className="size-[15px] min-w-[15px] bg-black" />
-            <p className="text-left w-full whitespace-nowrap">ABOUT US</p>
+            <div className="size-[15px] min-w-[15px] bg-white" />
+            <p className="text-left w-full whitespace-nowrap text-white">
+              ABOUT US
+            </p>
           </div>
-          <p className="lg:w-[786px] text-[24px] sm:text-[48px] leading-[120%] text-start lg:text-right lg:ml-auto">
+          <p className="lg:w-[786px] text-white text-[24px] sm:text-[48px] leading-[120%] text-start lg:text-right lg:ml-auto">
             We share the risk and reward to <br className="hidden lg:block" />{" "}
             turn stalled ideas into successful{" "}
             <br className="hidden lg:block" /> developments through simple,{" "}
@@ -79,18 +80,20 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <div className="border-t-black border-t" />
-      <section className="pt-[89.5px] px-6 sm:px-[50px] pb-[50px]">
+      <div className="border-t-white border-t" />
+      <section className="pt-[89.5px] px-6 sm:px-[50px] pb-[50px] bg-primary">
         <div className="flex items-center gap-2.5">
-          <div className="size-[15px] min-w-[15px] bg-black" />
-          <p className="text-left w-full whitespace-nowrap">WE FUND</p>
+          <div className="size-[15px] min-w-[15px] bg-white" />
+          <p className="text-left w-full whitespace-nowrap text-white">
+            WE FUND
+          </p>
         </div>
         <Faq faqData={FAQ_DATA} />
       </section>
       <div className="border-t-black border-t" />
       <section className="mt-[68px]">
         <div className="flex items-center gap-2.5 pl-6 sm:pl-[50px] mb-10 sm:mb-[88px]">
-          <div className="size-[15px] min-w-[15px] bg-black" />
+          <div className="size-[15px] min-w-[15px] bg-primary" />
           <p className="text-left w-full">FUNDED PROJECTS</p>
         </div>
         <RandomBorderGallery />

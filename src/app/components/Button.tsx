@@ -27,6 +27,7 @@ interface ButtonProps {
   ariaLabel?: string;
   size?: "sm" | "md" | "lg";
   showArrow?: boolean;
+  arrowClassName?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -42,6 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   target,
   ariaLabel,
+  arrowClassName,
   showArrow = false,
 }) => {
   const Tag = as === "button" ? "button" : Link;
@@ -101,7 +103,7 @@ export const Button: React.FC<ButtonProps> = ({
         (variant === "close" || variant === "back") &&
           "text-white bg-white/10 border border-black overflow-hidden rounded-full w-[38px] min-w-[38px] h-[38px]",
         variant !== "close" && variant !== "back" && sizeClass[size],
-        className
+        className,
       )}
       disabled={disabled}
       onClick={onClick}
@@ -113,7 +115,7 @@ export const Button: React.FC<ButtonProps> = ({
         : variant === "back"
           ? backIcon
           : children}
-      {showArrow && <AnimatedArrow />}
+      {showArrow && <AnimatedArrow className={arrowClassName} />}
     </Tag>
   );
 };

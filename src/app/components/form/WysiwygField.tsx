@@ -37,7 +37,6 @@ export const WysiwygField: React.FC<WysiwygFieldProps> = ({
     }
   }, [value]);
 
-  // ✅ Handle clear signal
   React.useEffect(() => {
     if (editorRef.current && clearSignal !== undefined) {
       editorRef.current.innerHTML = "";
@@ -47,7 +46,6 @@ export const WysiwygField: React.FC<WysiwygFieldProps> = ({
     }
   }, [clearSignal]);
 
-  // Sync toolbar state on selection change
   React.useEffect(() => {
     const updateState = () => {
       setIsBold(document.queryCommandState("bold"));
@@ -58,13 +56,11 @@ export const WysiwygField: React.FC<WysiwygFieldProps> = ({
     return () => document.removeEventListener("selectionchange", updateState);
   }, []);
 
-  // Update RHF + toolbar state
   const emitChange = () => {
     if (!editorRef.current) return;
 
     const newValue = editorRef.current.innerHTML;
 
-    // Only emit if value actually changed
     if (newValue !== lastValueRef.current) {
       lastValueRef.current = newValue;
       onChange?.(newValue);
@@ -114,8 +110,6 @@ export const WysiwygField: React.FC<WysiwygFieldProps> = ({
           I
         </button>
       </div>
-
-      {/* Editor */}
       <div
         ref={editorRef}
         contentEditable
