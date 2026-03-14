@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const resend = new Resend("re_BB4xa7g2_GkTB5hay5DQ4XAApKqVmDZaZ");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactEmailParams {
   name: string;
