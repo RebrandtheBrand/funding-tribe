@@ -1,4 +1,4 @@
-import { email, mapAddress, phone } from "@/app/utils/utils";
+import ContactUsForm from "@/app/features/contact-us/components/ContactUsForm";
 
 const ContactUsPage = () => {
   return (
@@ -18,53 +18,8 @@ const ContactUsPage = () => {
           </div>
           <div className="border-t w-[calc(100vw-10px)] -translate-x-6 sm:translate-x-[-50px] md:translate-x-0 md:w-auto border-t-black md:border-l md:border-l-black md:h-full" />
         </div>
-        <div className="py-20 sm:py-[136px] md:pl-[50px] lg:pl-[135px]">
-          {/* <div>
-            <div className="flex items-center gap-2.5">
-              <div className="size-[15px] min-w-[15px] bg-black" />
-              <p className="text-left w-full whitespace-nowrap">ADDRESS</p>
-            </div>
-            <a
-              href={mapAddress}
-              target="_blank"
-              className="uppercase font-bold text-[20px] sm:text-[24px] mt-10"
-            >
-              Level 33, 25 Canada Square, Canary Wharf, London, E14 5L
-            </a>
-            <div className="border-t border-t-black w-full mt-[50px]" />
-          </div> */}
-          <a
-            target="_blank"
-            href={`tel:${phone}`}
-            className="block"
-            aria-label="Phone number"
-          >
-            <div className="flex items-center gap-2.5 mt-[50px]">
-              <div className="size-[15px] min-w-[15px] bg-black" />
-              <p className="text-left w-full whitespace-nowrap">PHONE</p>
-            </div>
-
-            <p className="uppercase font-bold text-[20px] sm:text-[24px] mt-10">
-              {phone}
-            </p>
-
-            <div className="border-t border-t-black w-full mt-[50px]" />
-          </a>
-          <a
-            href={`mailto:${email}`}
-            target="_blank"
-            className="block"
-            aria-label="Email address"
-          >
-            <div className="flex items-center gap-2.5 mt-[50px]">
-              <div className="size-[15px] min-w-[15px] bg-black" />
-              <p className="text-left w-full whitespace-nowrap">EMAIL</p>
-            </div>
-
-            <p className="uppercase font-bold truncate text-[20px] sm:text-[24px] mt-10">
-              {email}
-            </p>
-          </a>
+        <div className="py-20 sm:py-[136px] md:pl-[50px] lg:pl-[135px] w-full">
+          <ContactUsForm />
         </div>
       </section>
     </div>

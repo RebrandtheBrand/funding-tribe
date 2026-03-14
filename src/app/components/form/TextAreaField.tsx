@@ -3,6 +3,8 @@ import * as React from "react";
 import clsx from "clsx";
 import { Label } from "../Elements/Label";
 
+import { ErrorMessage } from "../ErrorMessage";
+
 interface TextAreaFieldProps {
   id: string;
   placeholder?: string;
@@ -10,6 +12,7 @@ interface TextAreaFieldProps {
   isRequired?: boolean;
   registration: Partial<UseFormRegisterReturn>;
   hasError: FieldError | undefined;
+  errorMessage?: string;
   className?: string;
   label?: string;
   rows?: number;
@@ -30,6 +33,7 @@ export const TextAreaField: React.FunctionComponent<TextAreaFieldProps> = ({
   value,
   labelClassName,
   isRequired,
+  errorMessage,
   label,
 }) => {
   return (
@@ -45,7 +49,7 @@ export const TextAreaField: React.FunctionComponent<TextAreaFieldProps> = ({
         className={clsx(
           "w-full py-4 border border-black/30 px-4 font-WorkSans outline-none text-black rounded-md placeholder:text-sm placeholder:text-black/50 focus-within:border-black disabled:bg-gray-100",
           hasError && "border-red-500",
-          className
+          className,
         )}
         {...registration}
         maxLength={limit ? limit : undefined}
@@ -58,6 +62,7 @@ export const TextAreaField: React.FunctionComponent<TextAreaFieldProps> = ({
           </p>
         </div>
       )}
+      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>
   );
 };
