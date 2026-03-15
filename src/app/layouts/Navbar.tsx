@@ -9,6 +9,7 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import CustomCursor from "../components/CustomCursor";
 import { email, phone } from "../utils/utils";
 
+import logoWhite from "../../../public/logoWhite.svg";
 import logo from "../../../public/logo.svg";
 
 const Navbar = () => {
@@ -56,12 +57,21 @@ const Navbar = () => {
   return (
     <div className="">
       <CustomCursor isModalOpen={isComponentVisible} />
-      <div className="h-[50px] fixed bg-white min-h-[30px] lg:h-auto xl:h-[30px] flex w-full pr-6 sm:pr-[50px] lg:pr-0 justify-between lg:justify-normal lg:relative z-47">
+      <div className="h-[50px] fixed bg-primary lg:bg-white min-h-[30px] lg:h-auto xl:h-[30px] flex w-full pr-6 sm:pr-[50px] lg:pr-0 justify-between lg:justify-normal lg:relative z-47">
         <Link
           href="/"
           className="pl-6 sm:px-[50px] self-center flex items-center w-fit h-full"
         >
-          <Image src={logo} alt="trailing-arrow" className="min-w-[158.45px]" />
+          <Image
+            src={logo}
+            alt="trailing-arrow"
+            className="min-w-[158.45px] hidden lg:block"
+          />
+          <Image
+            src={logoWhite}
+            alt="trailing-arrow"
+            className="min-w-[158.45px] lg:hidden"
+          />
         </Link>
         <div className="w-full grid-cols-6 hidden lg:grid">
           {NAV_LINKS.map((link) => {
@@ -103,21 +113,22 @@ const Navbar = () => {
             isOpen={isComponentVisible}
             handleClick={handleClickOnDropDownButton}
             buttonRef={dropDownButtonRef}
+            className=""
           />
         </div>
       </div>
-      <div className="border-b-black border-b fixed top-[50px] lg:top-0 w-full lg:relative z-2" />
+      <div className="border-b-white lg:border-b-black border-b fixed top-[50px] lg:top-0 w-full lg:relative z-2" />
       <div
         ref={ref}
         className={clsx(
-          "fixed flex modal flex-col justify-between h-screen top-0 w-[300px] pt-[50px] overflow-hidden lg:hidden bg-white border-r border-r-black left-0 transition-[width,padding] duration-500 ease-in-out z-10",
+          "fixed flex modal bg-primary flex-col justify-between h-screen top-0 w-[300px] pt-[50px] overflow-hidden lg:hidden text-white border-r border-r-black left-0 transition-[width,padding] duration-500 ease-in-out z-10",
         )}
         style={{
           clipPath: isComponentVisible ? "inset(0 0 0 0)" : "inset(0 100% 0 0)",
           transition: "clip-path 300ms ease-in-out",
         }}
       >
-        <div className="border-t border-t-black">
+        <div className="border-t border-t-white">
           {NAV_LINKS.map((link) => {
             return (
               <Link
@@ -129,28 +140,28 @@ const Navbar = () => {
                 <div className="flex items-center pl px-6 h-full">
                   <p
                     className={clsx(
-                      "group-hover:text-white duration-500 transition-color text-sm text-left w-full",
+                      "group-hover:text-black duration-500 transition-color text-sm text-left w-full",
                       pathname.startsWith(link.href)
-                        ? "text-white"
-                        : "text-black",
+                        ? "text-black"
+                        : "text-white",
                     )}
                   >
                     {link.name}
                   </p>
                   <div
                     className={clsx(
-                      "size-[7px] group-hover:bg-white duration-500 transition-color",
-                      pathname.startsWith(link.href) ? "bg-white" : "bg-black",
+                      "size-[7px] group-hover:bg-black duration-500 transition-color",
+                      pathname.startsWith(link.href) ? "bg-black" : "bg-white",
                     )}
                   />
                   <div
                     className={clsx(
-                      "absolute w-full group-hover:h-full bg-black transition-all duration-200 left-0 -z-1",
+                      "absolute w-full group-hover:h-full bg-white transition-all duration-200 left-0 -z-1",
                       pathname.startsWith(link.href) ? "h-full" : "h-0",
                     )}
                   />
                 </div>
-                <div className="border-b border-b-black" />
+                <div className="border-b border-b-white" />
               </Link>
             );
           })}
